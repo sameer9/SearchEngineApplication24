@@ -18,7 +18,7 @@ namespace SearchEngineApp24.Controllers
         public async Task<IActionResult> Index(string query)
         {
              
-            var newQuery = query + " " + "Pizza";
+            var newQuery = query + " " + "Pizza Store";
             var localResults = _context.PizzaStores
                 .Where(p => p.Name.Contains(query) || p.Address.Contains(query) || p.City.Contains(query))
                 .ToList();
