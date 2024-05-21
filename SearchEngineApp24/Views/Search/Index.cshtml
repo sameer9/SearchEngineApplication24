@@ -1,0 +1,28 @@
+﻿@* @using SearchEngineApp.Models
+@model SearchAndResultModel *@
+
+@model IEnumerable<PizzaStore>;
+
+
+
+
+<form asp-action="Index" method="get"  asp-controller="Search" >
+    <div class="row">
+        <div class="col-sm-6">
+            <input value="" type="text" name="query" placeholder="Search for pizza stores by location" class="form-control" />
+        </div>
+        <div class="col-sm-3">
+            <button type="submit">Search</button>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+   
+    
+</form>
+
+<ul>
+    @foreach (var store in Model)
+    {
+        <li>@store.Name - @store.Address</li>
+    }
+</ul>
