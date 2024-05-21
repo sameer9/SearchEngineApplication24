@@ -7,7 +7,7 @@ namespace SearchEngineApp24.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly GooglePlacesService _googlePlacesService;
-
+        
         public SearchController(ApplicationDbContext context, GooglePlacesService googlePlacesService)
         {
             _context = context;
